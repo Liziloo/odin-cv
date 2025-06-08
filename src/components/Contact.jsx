@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CustomInput from "./Input";
+import CustomInput from "./CustomInput";
 
 function Contact() {
   const [editable, setEditable] = useState("true");
@@ -29,7 +29,6 @@ function Contact() {
     e.preventDefault();
     setEditable("true");
   }
-  
 
   if (editable === "true") {
     return (
@@ -40,7 +39,11 @@ function Contact() {
             label="First Name:"
             text={contact.firstName}
           />
-          <CustomInput id="last-name" label="Last Name:" text={contact.lastName} />
+          <CustomInput
+            id="last-name"
+            label="Last Name:"
+            text={contact.lastName}
+          />
           <CustomInput id="phone" label="Phone Number:" text={contact.phone} />
           <CustomInput id="email" label="Email:" text={contact.email} />
           <button type="submit">Submit</button>
