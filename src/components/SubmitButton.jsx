@@ -1,7 +1,7 @@
-function SubmitButton() {
+function SubmitButton({onSubmit}) {
   return (
     <>
-      <button type="submit"></button>
+      <button type="submit" onSubmit={onSubmit}>Submit</button>
     </>
   );
 }

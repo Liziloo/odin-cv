@@ -1,13 +1,14 @@
 import { useState } from "react";
 
-function Input({id, label}) {
+function CustomInput({ id, label, text }) {
+  const [value, setValue] = useState(text);
 
-    return (
-        <>
-            <label for={id}>{label}</label>
-            <input />
-        </>
-    )
+  return (
+    <>
+      <label htmlFor={id}>{label}</label>
+      <input id={id} value={value} onChange={e => setValue(e.target.value)} />
+    </>
+  );
 }
 
-export default Input
+export default CustomInput;
