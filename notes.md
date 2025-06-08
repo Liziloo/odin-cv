@@ -11,6 +11,7 @@ dates of study
 area of study
 
 ## Experience
+
 **Company**: Position, dates  
 Responsibilities
 
