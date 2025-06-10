@@ -32,35 +32,39 @@ function Contact() {
 
   if (editable === "true") {
     return (
-      <>
+      <section className='contact edit'>
         <form onSubmit={handleSubmit}>
-          <CustomInput
-            id="first-name"
-            label="First Name:"
-            text={contact.firstName}
-          />
-          <CustomInput
-            id="last-name"
-            label="Last Name:"
-            text={contact.lastName}
-          />
-          <CustomInput id="phone" label="Phone Number:" text={contact.phone} />
-          <CustomInput id="email" label="Email:" text={contact.email} />
-          <button type="submit">Submit</button>
+          <div className="row">
+            <CustomInput
+              id="first-name"
+              label="First Name:"
+              text={contact.firstName}
+            />
+            <CustomInput
+              id="last-name"
+              label="Last Name:"
+              text={contact.lastName}
+            />
+          </div>
+          <div className="row">
+            <CustomInput id="phone" label="Phone Number:" text={contact.phone} />
+            <CustomInput id="email" label="Email:" text={contact.email} />
+          </div>
+          <button className="submit" type="submit">Submit</button>
         </form>
-      </>
+      </section>
     );
   } else {
     return (
-      <>
+      <section className='contact filled'>
         <h1>
           {contact.firstName} {contact.lastName}
         </h1>
         <h4>
           {contact.phone} {contact.email}
         </h4>
-        <button onClick={handleEdit}>Edit</button>
-      </>
+        <button className='edit' onClick={handleEdit}>Edit</button>
+      </section>
     );
   }
 }

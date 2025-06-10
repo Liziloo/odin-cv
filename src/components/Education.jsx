@@ -58,12 +58,17 @@ function Education() {
       schoolArea = schoolToEdit[0].area;
     }
     return (
-      <section>
+      <section className="education edit">
         <form onSubmit={handleSubmit}>
-          <CustomInput id="school-name" label="School Name" text={schoolName} />
-          <CustomInput id="years" label="Years Attended:" text={schoolArea} />
-          <CustomInput id="area" label="Area of Study:" text={schoolYears} />
-          <button>Submit</button>
+          <div className="row">
+            <CustomInput id="school-name" label="School Name:" text={schoolName} />
+            <div className="col"></div>
+          </div>
+          <div className="row">
+            <CustomInput id="years" label="Years Attended:" text={schoolArea} />
+            <CustomInput id="area" label="Area of Study:" text={schoolYears} />
+          </div>
+          <button className="submit">Submit</button>
         </form>
 
         {education.length > 0 ? 
@@ -80,23 +85,23 @@ function Education() {
     )
   } else {
     return (
-      <section>
+      <section className="education">
         {education.map((school) => {
             return (
-              <div key={school.id} className="school">
+              <div key={school.id} className="school filled">
                 <h2>{school.name}</h2>
                 <h4>{school.years}</h4>
                 <p>{school.area}</p>
-                <button data-school-id={school.id} onClick={handleEditButton}>
+                <button className="edit" data-school-id={school.id} onClick={handleEditButton}>
                   Edit
                 </button>
-                <button  data-school-id={school.id} onClick={handleSchoolDelete}>
+                <button className="delete" data-school-id={school.id} onClick={handleSchoolDelete}>
                   Delete
                 </button>
               </div>
             );
           })}
-          <button onClick={handleAddSchool}>Add School</button>
+          <button className='add' onClick={handleAddSchool}>Add School</button>
       </section>
     )
   }

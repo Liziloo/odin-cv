@@ -6,7 +6,7 @@ function CustomTextarea({ id = '', label = '', text = ''}) {
   return (
     <div className="col">
       <label htmlFor={id}>{label}</label>
-      <textarea id={id} name={id} value={value} onChange={e => setValue(e.target.value)} />
+      <textarea id={id} name={id} rows='5' value={value} onChange={e => setValue(e.target.value)} />
     </div>
   );
 }
