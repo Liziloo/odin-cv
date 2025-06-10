@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function CustomInput({ id, label, text }) {
+function CustomInput({ id = '', label = '', text = '' }) {
   const [value, setValue] = useState(text);
 
   return (

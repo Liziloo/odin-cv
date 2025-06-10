@@ -1,17 +1,15 @@
-import { useState } from "react";
+
 import Contact from "./Contact";
 import Education from "./Education";
+import Experience from "./Experience";
 
 function CvForm() {
-
-
-  const [experience, setExperience] = useState([]);
 
   return (
     <>
         <Contact />
         <Education />
-    
+        <Experience />
     </>
   )
 }
