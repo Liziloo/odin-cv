@@ -19,7 +19,7 @@ function Education() {
         ]);
       } else {
         setEducation(education.map(school => {
-          if (school.id === editData.currentSchoolId) {
+          if (school.id === parseInt(editData.currentSchoolId)) {
             return {...school, name: newSchoolName, years: newYears, area: newArea}
           } else {
             return school;
@@ -42,13 +42,17 @@ function Education() {
     setEducation(education.filter(school => school.id !== deleteId));
   }
 
+  function handleAddSchool(e) {
+    e.preventDefault();
+    setEditData({editable: true, currentSchoolId: ''});
+  }
+
   if (editData.editable === true) {
     let schoolName = '';
     let schoolArea = '';
     let schoolYears = '';
     if (editData.currentSchoolId !== '') {
       const schoolToEdit = education.filter(school => school.id === parseInt(editData.currentSchoolId));
-      console.log(schoolToEdit);
       schoolName = schoolToEdit[0].name;
       schoolYears = schoolToEdit[0].years;
       schoolArea = schoolToEdit[0].area;
@@ -92,6 +96,7 @@ function Education() {
               </div>
             );
           })}
+          <button onClick={handleAddSchool}>Add School</button>
       </section>
     )
   }
