@@ -38,7 +38,7 @@ function Education() {
 
   function handleSchoolDelete(e) {
     e.preventDefault();
-    const deleteId = e.target.id;
+    const deleteId = parseInt(e.target.dataset.schoolId);
     setEducation(education.filter(school => school.id !== deleteId));
   }
 
