@@ -57,11 +57,11 @@ function Contact() {
   } else {
     return (
       <section className='contact filled'>
-        <h1>
+        <h1 className="name">
           {contact.firstName} {contact.lastName}
         </h1>
-        <h4>
-          {contact.phone} {contact.email}
+        <h4 className="contact-methods">
+          <span className="phone">{contact.phone}</span> <span className="email">{contact.email}</span>
         </h4>
         <button className='edit' onClick={handleEdit}>Edit</button>
       </section>

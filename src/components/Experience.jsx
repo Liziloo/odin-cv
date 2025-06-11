@@ -65,7 +65,7 @@ function Experience() {
       <section className="experience edit">
         <form onSubmit={handleSubmit}>
           <div className="row">
-              <CustomInput id="company-name" label="Company/Organization:" text={company} />
+              <CustomInput id="company-name" label="Company:" text={company} />
               <div className="col"></div>
           </div>
           <div className="row">
@@ -99,9 +99,9 @@ function Experience() {
             return (
               <div key={ex.id} className="company">
                 <h2>{ex.company}</h2>
-                <h3>{ex.position}</h3>
-                <h4>{ex.years}</h4>
-                <p>{ex.responsibilities}</p>
+                <h4>{ex.position}</h4>
+                <h4 className="company-years">{ex.years}</h4>
+                <p className="responsibilities">{ex.responsibilities}</p>
                 <button className="edit" data-experience-id={ex.id} onClick={handleEditButton}>
                   Edit
                 </button>

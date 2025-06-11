@@ -3,34 +3,70 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
+    background-color: rgba(105, 51, 12, 0.226);
 }
 
-.container > h1 {
-    width: 75vw;
+.background-div {
+    min-height: 95vh;
+    margin: 10px 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 60px;
+    border-radius: 1%;
+}
+
+section, .background-div > h1 {
+    width: 65vw;
 }
 
 section {
-    width: 75vw;
+    margin: 20px 0;
 }
 
 .row {
     width: 100%;
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     gap: 15px;
 }
 
 .col {
     flex: 1 1 50%;
     display: flex;
+    gap: 15px;
 }
 
 label {
     flex: 1 1 25%;
+    font-weight: bold;
 }
 
 input, textarea {
     flex: 3 1 75%;
+}
+
+button {
+    padding: 1px 7px;
+    background-color: #47682c48;
+    border-color: rgb(204, 202, 202);
+    margin: 10px 10px 10px 0;
+}
+
+.contact-methods {
+    display: flex;
+    gap: 5vw;
+    margin-bottom: 10px;
+}
+
+.company-years, .responsibilities {
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-weight: 500;
 }
